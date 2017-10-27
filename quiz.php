@@ -11,6 +11,13 @@ function closeTag($tag)
   return "</" . $tag . ">";
 }
 
+function questionTitle($question)
+{
+  $html = "<h3>" . $question . "</h3>";
+  return $html;
+}
+
+
 function createInput($inputSpecs)
 { $html = "";
 //   $inputSpecs = [
@@ -22,16 +29,21 @@ function createInput($inputSpecs)
 //   'label' => '',
 //   'position' => '',
 // ]
-
-  if ($inputSpecs['position'] ==   true) {
+  if ($inputSpecs['position'] ==  true) {
     $html .= "<label for='" . $inputSpecs['id'] . "'>" . $inputSpecs['label'] . "</label>";
   }
 
-    $html .= "<input id='" . $inputSpecs['id'] . "' type='" . $inputSpecs['type'] . "' name='" . $inputSpecs['name'] . "' value='" . $inputSpecs['value'] . "' '" . $inputSpecs['checked'] . "'>";
+    $html .= "<input id='" . $inputSpecs['id'] . "' type='" . $inputSpecs['type'] . "' name='" . $inputSpecs['name'] . "' value='" . $inputSpecs['value'] . "' " . $inputSpecs['checked'] . ">";
 
 
   if (!$inputSpecs['position']) {
     $html .= "<label for='" . $inputSpecs['id'] . "'>" . $inputSpecs['label'] . "</label>";
   }
   return $html;
+}
+
+
+function createSubmit($value)
+{
+  return '<input type="submit" value="' . $value . '">';
 }
