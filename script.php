@@ -4,12 +4,21 @@ if (isset($_GET["q1"])) {
   $points ++;
 }
 
-if ($_GET["q2"] == "c") {
+if (!isset ($_GET["q2[0]"]) && !isset ($_GET["q2[1]"]) && isset ($_GET["q2[2]"]) && isset($_GET["q2[3]"])) {
   $points ++;
 }
 
-if ($_GET["q3"] == "d") {
-  $points ++;
+if (isset($_GET['q3a']) && isset($_GET['q3b']) && !isset($_GET['q3c']) && !isset($_GET['q3d']) && isset($_GET['q3e']) && isset($_GET['q3f']) && isset($_GET['q3g'])
+&& !isset($_GET['q3h'])) {
+  $points += 3;
+}
+
+if ($_GET["q4"] == "leiji matsumoto") {
+  $points += 2;
+}
+
+if ($_GET["q5"] == "5") {
+  $points += 2;
 }
 
 require_once("head.html");

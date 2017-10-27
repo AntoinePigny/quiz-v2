@@ -28,13 +28,13 @@ require_once('quiz.php')
 ]);
 
   echo questionTitle('Lesquelles de ces chansons sont présentes sur le premier album du groupe Daft Punk ?');
-  echo createInput(['id' => 'df1','type' => 'checkbox','name' => 'q2','value' => 'a','checked' => 'checked','label' => 'Hot Fidelity','position' => false,
+  echo createInput(['id' => 'df1','type' => 'checkbox','name' => 'q2[]','value' => 'a','checked' => 'checked','label' => 'Hot Fidelity','position' => false,
 ]);
-  echo createInput(['id' => 'df2','type' => 'checkbox','name' => 'q2','value' => 'b','checked' => '','label' => 'Discovery','position' => false,
+  echo createInput(['id' => 'df2','type' => 'checkbox','name' => 'q2[]','value' => 'b','checked' => '','label' => 'Discovery','position' => false,
 ]);
-  echo createInput(['id' => 'df3','type' => 'checkbox','name' => 'q2','value' => 'c','checked' => '','label' => "Rollin' and Scratchin'",'position' => false,
+  echo createInput(['id' => 'df3','type' => 'checkbox','name' => 'q2[]','value' => 'c','checked' => '','label' => "Rollin' and Scratchin'",'position' => false,
 ]);
-  echo createInput(['id' => 'df4','type' => 'checkbox','name' => 'q2','value' => 'd','checked' => '','label' => 'Phoenix','position' => false,
+  echo createInput(['id' => 'df4','type' => 'checkbox','name' => 'q2[]','value' => 'd','checked' => '','label' => 'Phoenix','position' => false,
 ]);
 
   echo questionTitle('Choisissez les noms des personnages principaux de Interstella 5555 dans la liste suivante');
